@@ -5,3 +5,25 @@ description = "Add your description here"
 readme = "docs/README.md"
 requires-python = ">=3.12"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "ipykernel",
+    "mypy",
+    "ruff",
+]
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = []
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
